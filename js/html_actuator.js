@@ -51,22 +51,27 @@ HTMLActuator.prototype.clearContainer = function (container) {
 };
 
 HTMLActuator.prototype.addTile = function (tile) {
-  var valueMap = {
-    2 :    '2',
-    4 :    '4',
-    8 :    "8",
-    16 :   "16",
-    32 :   '32',
-    64 :   '64',
-    128 :  '128',
-    256 :  '256',
-    512 :  '512',
-    1024 : '1024',
-    2048 : '2048',
-    4096 : '4096',
-    8192 : '8192'
-  }
+  var text=new Array(18);
+  text[0] = " ";
+  text[1] = "15<br>University of Science and Technology of China";
+  text[2] = "14<br>Nankai";
+  text[3] = "13<br>Jida";
+  text[4] = "12<br>Harbin Institute of Technology";
+  text[5] = "11<br>Central China University of Science and Technology";
+  text[6] = "10<br>Shanda";
+  text[7] = "9<br>Zhongshan";
+  text[8] = "8<br>Sichuan University";
+  text[9] = "7<br>Wuhan University";
+  text[10] = "6<br>Nanda University";
+  text[11] = "5<br>Fudan";
+  text[12] = "4<br>Shanghai Jiaotong University";
+  text[13] = "3<br>Tsinghua University";
+  text[14] = "2<br>Zhejiang University";
+  text[15] = "1<br>Peking University";
+  text[16] = " ";
+  text[17] = " ";
   var self = this;
+  var text2 = function (n) { var r = 0; while (n > 1) r++, n >>= 1; return r; }
 
   var wrapper   = document.createElement("div");
   var inner     = document.createElement("div");
